@@ -1,0 +1,25 @@
+[*.cs]
+
+# HAA0101: Array allocation for params parameter
+dotnet_diagnostic.HAA0101.severity = suggestion
+
+# HAA0301: Closure Allocation Source
+dotnet_diagnostic.HAA0301.severity = suggestion
+
+# HAA0601: Value type to reference type conversion causing boxing allocation
+dotnet_diagnostic.HAA0601.severity = suggestion
+
+# HAA0603: Delegate allocation from a method group
+dotnet_diagnostic.HAA0603.severity = suggestion
+
+# RCS1214: Unnecessary interpolated string.
+dotnet_diagnostic.RCS1214.severity = warning
+
+# RCS1163: Unused parameter.
+dotnet_diagnostic.RCS1163.severity = warning
+
+# RCS1249: Unnecessary null-forgiving operator.
+dotnet_diagnostic.RCS1249.severity = warning
+
+# VSSpell001: Spell Check
+dotnet_diagnostic.VSSpell001.severity = suggestion

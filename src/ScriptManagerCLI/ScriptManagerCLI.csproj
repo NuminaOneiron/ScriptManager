@@ -1,0 +1,83 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+
+		<OutputType>Exe</OutputType>
+		<OutputPath>$(ProjectPath)bin\$(Configuration)</OutputPath>
+		<AccelerateBuildsInVisualStudio>true</AccelerateBuildsInVisualStudio>
+		<TargetFramework>net7.0</TargetFramework>
+		<PlatformTarget>anycpu</PlatformTarget>
+		<LangVersion>latest</LangVersion>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<Version>1.0.0.1</Version>
+		<GenerateRuntimeConfigurationFiles>false</GenerateRuntimeConfigurationFiles>
+		<EmitCompilerGeneratedFiles>false</EmitCompilerGeneratedFiles>
+		<InvariantGlobalization>false</InvariantGlobalization>
+		<DisableTransitiveProjectReferences>true</DisableTransitiveProjectReferences>
+		<SkipNonexistentTargets>true</SkipNonexistentTargets>
+
+		<AssemblyTitle>Script Manager</AssemblyTitle>
+		<AssemblyName>sm</AssemblyName>
+		<Company>Xi Systems</Company>
+		<Copyright>No Copyright</Copyright>
+		<Product>Script Manager CLI Tool</Product>
+
+		<PublishReadyToRun>true</PublishReadyToRun>
+		<PublishReadyToRunComposite>false</PublishReadyToRunComposite>
+		<PublishReadyToRunEmitSymbols>false</PublishReadyToRunEmitSymbols>
+
+		<PublishSingleFile>true</PublishSingleFile>
+		<!--<PublishAot>true</PublishAot>-->
+
+		<SelfContained>true</SelfContained>
+		<StripSymbols>true</StripSymbols>
+		<EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+		<IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+		<IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
+
+		<IlcInvariantGlobalization>true</IlcInvariantGlobalization>
+		<IlcGenerateStackTraceData>false</IlcGenerateStackTraceData>
+		<IlcDisableReflection>true</IlcDisableReflection>
+		<IlcOptimizationPreference>size</IlcOptimizationPreference>
+		<IlcFoldIdenticalMethodBodies>true</IlcFoldIdenticalMethodBodies>
+
+		<!--<PublishTrimmed>true</PublishTrimmed>
+		<TrimMode>partial</TrimMode>
+		<EnableTrimAnalyzer>true</EnableTrimAnalyzer>
+		<ILLinkTreatWarningsAsErrors>false</ILLinkTreatWarningsAsErrors>
+		<SuppressTrimAnalysisWarnings>true</SuppressTrimAnalysisWarnings>
+		<TrimmerSingleWarn>false</TrimmerSingleWarn>
+		<TrimmerRemoveSymbols>true</TrimmerRemoveSymbols>
+		<TrimmerDefaultAction>warning</TrimmerDefaultAction>-->
+
+	</PropertyGroup>
+
+
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+		<DebugType>full</DebugType>
+		<Optimize>false</Optimize>
+		<DefineConstants>DEBUG;TRACE</DefineConstants>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+		<DebugType>none</DebugType>
+		<Optimize>true</Optimize>
+		<DefineConstants>TRACE</DefineConstants>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Logging.Console" Version="8.0.0-preview.7.23375.6" />
+		<PackageReference Include="NReco.Logging.File" Version="1.1.6" />
+		<PackageReference Include="Spectre.Console" Version="0.47.1-preview.0.12" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\ScriptManager\ScriptManager.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="C:\Users\Administrator\source\repos\ScriptManager\ScriptManagerCLI\.editorconfig" />
+	</ItemGroup>
+
+</Project>

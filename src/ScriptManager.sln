@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScriptManager", "ScriptManager\ScriptManager.csproj", "{3F3E9736-1929-4E60-AB66-A69897D331DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScriptManagerCLI", "ScriptManagerCLI\ScriptManagerCLI.csproj", "{4AB14D0B-7B46-4C8A-8BC6-554156F29953}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3F3E9736-1929-4E60-AB66-A69897D331DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F3E9736-1929-4E60-AB66-A69897D331DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F3E9736-1929-4E60-AB66-A69897D331DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F3E9736-1929-4E60-AB66-A69897D331DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AB14D0B-7B46-4C8A-8BC6-554156F29953}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AB14D0B-7B46-4C8A-8BC6-554156F29953}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AB14D0B-7B46-4C8A-8BC6-554156F29953}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AB14D0B-7B46-4C8A-8BC6-554156F29953}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B6BD9763-1FF4-4F1D-86CB-6B099093429A}
+	EndGlobalSection
+EndGlobal

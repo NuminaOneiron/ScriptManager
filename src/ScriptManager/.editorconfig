@@ -1,0 +1,165 @@
+
+[*.{cs,vb}]
+#### Naming styles ####
+
+# Naming rules
+
+dotnet_naming_rule.interface_should_be_begins_with_i.severity = suggestion
+dotnet_naming_rule.interface_should_be_begins_with_i.symbols = interface
+dotnet_naming_rule.interface_should_be_begins_with_i.style = begins_with_i
+
+dotnet_naming_rule.types_should_be_pascal_case.severity = suggestion
+dotnet_naming_rule.types_should_be_pascal_case.symbols = types
+dotnet_naming_rule.types_should_be_pascal_case.style = pascal_case
+
+dotnet_naming_rule.non_field_members_should_be_pascal_case.severity = suggestion
+dotnet_naming_rule.non_field_members_should_be_pascal_case.symbols = non_field_members
+dotnet_naming_rule.non_field_members_should_be_pascal_case.style = pascal_case
+
+# Symbol specifications
+
+dotnet_naming_symbols.interface.applicable_kinds = interface
+dotnet_naming_symbols.interface.applicable_accessibilities = public, internal, private, protected, protected_internal, private_protected
+dotnet_naming_symbols.interface.required_modifiers = 
+
+dotnet_naming_symbols.types.applicable_kinds = class, struct, interface, enum
+dotnet_naming_symbols.types.applicable_accessibilities = public, internal, private, protected, protected_internal, private_protected
+dotnet_naming_symbols.types.required_modifiers = 
+
+dotnet_naming_symbols.non_field_members.applicable_kinds = property, event, method
+dotnet_naming_symbols.non_field_members.applicable_accessibilities = public, internal, private, protected, protected_internal, private_protected
+dotnet_naming_symbols.non_field_members.required_modifiers = 
+
+# Naming styles
+
+dotnet_naming_style.begins_with_i.required_prefix = I
+dotnet_naming_style.begins_with_i.required_suffix = 
+dotnet_naming_style.begins_with_i.word_separator = 
+dotnet_naming_style.begins_with_i.capitalization = pascal_case
+
+dotnet_naming_style.pascal_case.required_prefix = 
+dotnet_naming_style.pascal_case.required_suffix = 
+dotnet_naming_style.pascal_case.word_separator = 
+dotnet_naming_style.pascal_case.capitalization = pascal_case
+
+dotnet_naming_style.pascal_case.required_prefix = 
+dotnet_naming_style.pascal_case.required_suffix = 
+dotnet_naming_style.pascal_case.word_separator = 
+dotnet_naming_style.pascal_case.capitalization = pascal_case
+dotnet_style_operator_placement_when_wrapping = beginning_of_line
+tab_width = 4
+indent_size = 4
+end_of_line = crlf
+dotnet_style_coalesce_expression = true:suggestion
+dotnet_style_null_propagation = true:suggestion
+dotnet_style_prefer_is_null_check_over_reference_equality_method = true:suggestion
+
+# IDE0074: Use compound assignment
+dotnet_diagnostic.IDE0074.severity = warning
+
+[*.cs]
+csharp_indent_labels = no_change
+csharp_using_directive_placement = outside_namespace:silent
+csharp_prefer_simple_using_statement = true:suggestion
+csharp_prefer_braces = true:silent
+csharp_style_namespace_declarations = file_scoped:silent
+csharp_style_prefer_method_group_conversion = true:silent
+csharp_style_prefer_top_level_statements = true:silent
+csharp_style_expression_bodied_methods = false:silent
+csharp_style_expression_bodied_constructors = false:silent
+csharp_style_expression_bodied_operators = false:silent
+csharp_style_expression_bodied_properties = true:silent
+csharp_style_expression_bodied_indexers = true:silent
+csharp_style_expression_bodied_accessors = true:silent
+csharp_style_expression_bodied_lambdas = true:silent
+csharp_style_expression_bodied_local_functions = false:silent
+
+# HAA0301: Closure Allocation Source
+dotnet_diagnostic.HAA0301.severity = suggestion
+
+# HAA0302: Display class allocation to capture closure
+dotnet_diagnostic.HAA0302.severity = suggestion
+
+# HAA0601: Value type to reference type conversion causing boxing allocation
+dotnet_diagnostic.HAA0601.severity = suggestion
+
+# HAA0101: Array allocation for params parameter
+dotnet_diagnostic.HAA0101.severity = suggestion
+
+# HAA0603: Delegate allocation from a method group
+dotnet_diagnostic.HAA0603.severity = suggestion
+
+# U2U1004: The struct should implement IEquatable
+dotnet_diagnostic.U2U1004.severity = suggestion
+
+# HAA0401: Possible allocation of reference type enumerator
+dotnet_diagnostic.HAA0401.severity = suggestion
+
+# RCS1197: Optimize StringBuilder.Append/AppendLine call.
+dotnet_diagnostic.RCS1197.severity = warning
+
+# RCS1249: Unnecessary null-forgiving operator.
+dotnet_diagnostic.RCS1249.severity = warning
+
+# CA2254: Template should be a static expression
+dotnet_diagnostic.CA2254.severity = warning
+
+# RCS1036: Remove unnecessary blank line.
+dotnet_diagnostic.RCS1036.severity = suggestion
+
+# RCS1170: Use read-only auto-implemented property.
+dotnet_diagnostic.RCS1170.severity = warning
+
+# RCS1123: Add parentheses when necessary.
+dotnet_diagnostic.RCS1123.severity = warning
+
+# IDE0059: Unnecessary assignment of a value
+dotnet_diagnostic.IDE0059.severity = suggestion
+
+# RCS1104: Simplify conditional expression.
+dotnet_diagnostic.RCS1104.severity = warning
+
+# RCS1038: Remove empty statement.
+dotnet_diagnostic.RCS1038.severity = warning
+
+# VSSpell001: Spell Check
+dotnet_diagnostic.VSSpell001.severity = suggestion
+
+# RCS1003: Add braces to if-else (when expression spans over multiple lines).
+dotnet_diagnostic.RCS1003.severity = warning
+
+# RCS1242: Do not pass non-read-only struct by read-only reference.
+dotnet_diagnostic.RCS1242.severity = suggestion
+
+# EPC12: Suspicious exception handling: only Message property is observed in exception block.
+dotnet_diagnostic.EPC12.severity = suggestion
+
+# U2U1212: Capture intermediate results in lambda expressions
+dotnet_diagnostic.U2U1212.severity = warning
+
+# SYSLIB1045: Convert to 'GeneratedRegexAttribute'.
+dotnet_diagnostic.SYSLIB1045.severity = warning
+
+# RCS1146: Use conditional access.
+dotnet_diagnostic.RCS1146.severity = warning
+
+# RCS1205: Order named arguments according to the order of parameters.
+dotnet_diagnostic.RCS1205.severity = warning
+
+# RCS1214: Unnecessary interpolated string.
+dotnet_diagnostic.RCS1214.severity = warning
+
+# RCS1206: Use conditional access instead of conditional expression.
+dotnet_diagnostic.RCS1206.severity = warning
+
+# ERP022: Unobserved exception in generic exception handler
+dotnet_diagnostic.ERP022.severity = suggestion
+
+# RCS1077: Optimize LINQ method call.
+dotnet_diagnostic.RCS1077.severity = warning
+
+# HAA0602: Delegate on struct instance caused a boxing allocation
+dotnet_diagnostic.HAA0602.severity = suggestion
+
+# EPS06: Hidden struct copy operation
+dotnet_diagnostic.EPS06.severity = suggestion
