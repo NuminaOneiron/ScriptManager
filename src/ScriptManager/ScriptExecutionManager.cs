@@ -482,7 +482,6 @@ public abstract class ScriptExecutionManager : IScriptExecutionManager
     internal void BulkInsertCsvScripts(IEnumerable<ScriptHistory> scripts)
     {
         List<string> existingScripts = new List<string>(DataSource.ReadAllLines());
-        if (scripts.TryGetNonEnumeratedCount(out _) is false) _ = scripts.Count();
 
         foreach (ScriptHistory script in scripts)
         {
@@ -498,13 +497,13 @@ public abstract class ScriptExecutionManager : IScriptExecutionManager
     {
         _ = Parallel.ForEach(scripts, Validate);
 
-        List<ScriptHistory>? existingScripts = JsonSerializer.Deserialize<List<ScriptHistory>>(DataSource.ReadAllText());
+        List<ScriptHistory>? existingScripts = JsonSerializer.Deserialize<List<ScriptHistory>>(DataSource.ReadAllText(), SourceGenerationContext.Default.ListScriptHistory);
 
         if (scripts.TryGetNonEnumeratedCount(out int count) is false) count = scripts.Count();
 
         existingScripts?.AddRange(scripts);
 
-        string json = JsonSerializer.Serialize<IEnumerable<ScriptHistory>>(existingScripts!);
+        string json = JsonSerializer.Serialize<List<ScriptHistory>>(existingScripts!, SourceGenerationContext.Default.ListScriptHistory);
 
         DataSource.WriteAllText(json);
 
@@ -559,7 +558,7 @@ public abstract class ScriptExecutionManager : IScriptExecutionManager
     {
         _ = Parallel.ForEach(scripts, Validate);
 
-        string json = JsonSerializer.Serialize(scripts);
+        string json = JsonSerializer.Serialize(scripts, SourceGenerationContext.Default.IEnumerableScriptHistory);
 
         DataSource.WriteAllText(json);
 

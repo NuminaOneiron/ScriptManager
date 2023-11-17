@@ -1,4 +1,5 @@
-﻿using ScriptManager.Enums;
+﻿
+using ScriptManager.Enums;
 
 namespace ScriptManager;
 
